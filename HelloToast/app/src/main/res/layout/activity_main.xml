@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,12 +8,13 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonToast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:onClick="showToast"
-        android:text="@string/toast" />
+        android:text="@string/toast"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/showCount"
@@ -25,9 +26,11 @@
         android:gravity="center"
         android:text="@string/_0"
         android:textAlignment="center"
+        android:layout_below="@+id/buttonToast"
         android:textColor="@color/white"
-        android:layout_weight="1"
-        android:textSize="160sp" />
+        android:textSize="160sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/buttonCount"
@@ -35,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:onClick="incrementCount"
+        android:layout_below="@+id/showCount"
         android:text="@string/count" />
 
-</LinearLayout>
+</RelativeLayout>
