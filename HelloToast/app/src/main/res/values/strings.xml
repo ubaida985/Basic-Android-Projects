@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HelloToast</string>
+    <string name="app_name">HelloConstraint</string>
     <string name="toastMessage">Hello There!!!</string>
     <string name="toast">Toast</string>
     <string name="count">Count</string>

@@ -9,36 +9,46 @@
 
     <Button
         android:id="@+id/buttonToast"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
         android:onClick="showToast"
-        android:text="@string/toast"
-        android:layout_centerHorizontal="true" />
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/toast" />
 
     <TextView
         android:id="@+id/showCount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="8dp"
+        android:layout_toRightOf="@+id/buttonToast"
         android:background="#FFFF00"
         android:gravity="center"
         android:text="@string/_0"
         android:textAlignment="center"
-        android:layout_below="@+id/buttonToast"
         android:textColor="@color/white"
-        android:textSize="160sp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textSize="160sp" />
+
+    <Button
+        android:id="@+id/buttonZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonToast"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/gray"
+        android:onClick="resetCount"
+        android:text="Zero" />
 
     <Button
         android:id="@+id/buttonCount"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_below="@+id/buttonZero"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
         android:onClick="incrementCount"
-        android:layout_below="@+id/showCount"
+        android:backgroundTint="@color/teal_200"
         android:text="@string/count" />
 
 </RelativeLayout>

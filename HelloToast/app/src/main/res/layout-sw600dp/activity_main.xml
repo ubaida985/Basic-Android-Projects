@@ -8,36 +8,56 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="468dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple_500"
         android:onClick="showToast"
         android:text="@string/toast"
         android:textSize="60sp"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCount"
+        app:layout_constraintEnd_toStartOf="@+id/buttonZero"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonCount"
-        android:layout_width="468dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/purple_500"
         android:onClick="incrementCount"
         android:text="@string/count"
         android:textSize="60sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintStart_toEndOf="@+id/buttonZero"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/gray"
+        android:onClick="resetCount"
+        android:text="Zero"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonCount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/showCount"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
         android:background="#FFFF00"
         android:gravity="center"
         android:text="@string/_0"
@@ -47,5 +67,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonZero" />
 </androidx.constraintlayout.widget.ConstraintLayout>
