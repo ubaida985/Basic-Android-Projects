@@ -19,7 +19,7 @@
 
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/articleHeading">
 
@@ -43,6 +43,13 @@
                 android:lineSpacingExtra="5sp"
                 android:padding="@dimen/paddingRegular"
                 android:text="@string/article_text" />
+            <Button
+                android:id="@+id/buttonAddComment"
+                android:text="@string/add_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/gray"
+                />
         </LinearLayout>
 
 
