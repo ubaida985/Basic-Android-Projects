@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Implicit Intents</string>
+    <string name="website">https://ubaida985.github.io/portfolio/</string>
+    <string name="open_website">Open Website</string>
+    <string name="location">Idrees Biriyani</string>
+    <string name="open_location">Open Location</string>
+    <string name="text">Hello, this is a part of the google course</string>
+    <string name="share_Text">Share</string>
+    <string name="launchCamera">Take a Photo</string>
+</resources>

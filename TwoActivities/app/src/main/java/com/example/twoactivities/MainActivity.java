@@ -1,5 +1,6 @@
 package com.example.twoactivities;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         editTextMain = (EditText) findViewById(R.id.editTextMain);
         textViewReply = (TextView) findViewById(R.id.textViewReply);
+        Log.d("TAG", "CREATED");
     }
 
     public void switchToSecondActivity(View view) {
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         String message = editTextMain.getText().toString();
         intent.putExtra(MESSAGE, message);
         startActivityForResult(intent, TEXT_REQUEST);
+        Log.d("TAG", "SWITCHING");
     }
 
     @Override
@@ -41,5 +44,25 @@ public class MainActivity extends AppCompatActivity {
                 textViewReply.setText(reply);
             }
         }
+        Log.d("TAG", "GETTING RESULT");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        String reply = textViewReply.getText().toString();
+        if( reply != null ){
+            outState.putString("REPLY_TEXT", reply );
+        }
+        Log.d("TAG", "SAVING");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if( savedInstanceState != null ){
+            textViewReply.setText(savedInstanceState.getString("REPLY_TEXT"));
+        }
+        Log.d("TAG", "RESTORING");
     }
 }

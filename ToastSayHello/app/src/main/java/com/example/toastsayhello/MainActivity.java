@@ -1,5 +1,6 @@
 package com.example.toastsayhello;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textViewCount = (TextView) findViewById(R.id.textViewCount);
     }
-
+    
     public void sayHello(View view) {
         Intent intent = new Intent(this, HelloSay.class);
         intent.putExtra(SENDCOUNT, Integer.toString(count));
